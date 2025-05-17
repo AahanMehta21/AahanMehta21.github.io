@@ -1,8 +1,9 @@
 import React from "react";
 
-export const StickyNote = ({ title, image, goal, status, skills, icon }) => {
+export const StickyNote = ({ title, image, goal, status, skills, icon, onClick }) => {
   return (
     <div
+    onClick={onClick}
   className="relative w-[280px] sm:w-[300px] p-4 shadow-lg rounded-lg border text-black transform rotate-[-1.5deg] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:brightness-110 cursor-pointer"
   style={{
     backgroundColor: "#fdf6e3",

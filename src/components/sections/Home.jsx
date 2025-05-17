@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { StickyNote } from "./StickyNote";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { ProjectJournal } from "./ProjectJournal"; 
 
 const projects = [
   {
@@ -96,6 +98,7 @@ const projects = [
 
 
 export const Home = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
   return (
     <section
       id="home"
@@ -113,14 +116,20 @@ export const Home = () => {
         </div>
         {projects.map((proj, idx) => (
           <RevealOnScroll key={idx}>
-            <StickyNote {...proj} />
+            <StickyNote {...proj} onClick={() => setSelectedProject(proj)} />
           </RevealOnScroll>
         ))}
       </section>
+      {selectedProject && (
+        <ProjectJournal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
       </RevealOnScroll>
     </section>
   );
 };
+
+
+
 // import { RevealOnScroll } from "../RevealOnScroll";
 
 // export const Home = () => {
