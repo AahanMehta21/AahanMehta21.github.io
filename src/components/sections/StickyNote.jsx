@@ -1,5 +1,16 @@
 import React from "react";
 
+const journal = [
+  {
+    title: "Custom Keyboard",
+    images: ["keyboard.png", "keyboard.png", "keyboard.png"],
+    purpose: "meow meow",
+    details: "meow meow",
+    skills: "meow meow",
+    challenges: "meow meow",
+  },
+];
+
 export const StickyNote = ({ title, image, goal, status, skills, icon, onClick }) => {
   return (
     <div

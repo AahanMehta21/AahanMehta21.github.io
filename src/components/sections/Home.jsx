@@ -6,7 +6,7 @@ import { ProjectJournal } from "./ProjectJournal";
 const projects = [
   {
     title: "Custom Keyboard",
-    image: "Custom Keyboard", 
+    image: "assets/keyboard.png", 
     goal: "Create a compact custom mechanical keyboard with embedded C",
     status: "Completed*",
     skills: ["Embedded C", "PCB Design", "3D Design and Printing"],
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "8 bit computer",
-    image: "8 Bit Computer",
+    image: "assets/8bitcomp.png",
     goal: "Build an 8-bit functional CPU using CMOS 74HC logic ICs on the breadboard along with custom assembly language",
     status: "In progress (Registers, clock, and ALU fully working)",
     skills: ["CPU Architecture", "Breadboarding", "Digital Systems Design", "Debugging and testing", "Assembly"],
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: "Self-Compiling C Compiler",
-    image: "/assets/compiler.png",
+    image: "assets/compiler.jpg",
     goal: "Develop a self-compiling C compiler with x86-64 Assembly backend",
     status: "Completed",
     skills: ["C", "Assembly", "Parsing", "Compiler Design", "Computer Architecture"],
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "STM32 Pacman Game",
-    image: "/assets/ece_projects.png",
+    image: "/assets/pacman.jpeg",
     goal: "Design and implement the Pacman Game on STM32 with a TFT LCD display, joystick, LED matrix, and core peripherals",
     status: "Completed",
     skills: ["Embedded Systems", "STM32", "C", "Game Design", "Project Management", "Git"],
@@ -38,15 +38,15 @@ const projects = [
   },
   {
     title: "Simple x86 Kernel",
-    image: "/assets/kernel.png",
+    image: "/assets/bootloader.png",
     goal: "Develop a minimal x86 floppy disk bootloader in NASM assembly",
     status: "Completed",
     skills: ["NASM Assembly", "C++", "Bootloader", "Kernel Development", "Operating Systems"],
     icon: "💻",
   },
   {
-    title: "Walkie Talkie",
-    image: "/assets/walkie_talkie.png",
+    title: "Walkie Talkie - Winner, Best Hardware Hack @ HackPrinceton 2025",
+    image: "/assets/walkietalkie.jpeg",
     goal: "Develop a smart cane to aid visually impaired individuals with real-time communication and obstacle detection",
     status: "Completed",
     skills: ["Raspberry Pi", "Computer Vision", "IoT", "Machine Learning", "Embedded Systems"],
@@ -54,8 +54,8 @@ const projects = [
     link: "https://devpost.com/software/walkie-talkie-xg9d70",
   },
   {
-    title: "Grade Saver",
-    image: "/assets/grade_saver.png",
+    title: "Grade Saver - Winner, Best Browser Automation Award @ Catapult Hacks 2025)",
+    image: "/assets/gradesaver.jpg",
     goal: "Create a Chrome extension to automate regrade requests on Gradescope",
     status: "Completed",
     skills: ["Web Scraping", "LLMs", "LVMs", "HTML", "CSS", "JavaScript"],
@@ -64,7 +64,7 @@ const projects = [
   },
   {
     title: "Purdue Marketplace",
-    image: "Purdue Marketplace",
+    image: "assets/marketplace.jpg",
     goal: "Create a marketplace application for Purdue students to buy and sell items",
     status: "Completed",
     skills: ["Java", "gRPC framework", "ORM Database", "GUI", "Concurrency"],
@@ -72,15 +72,15 @@ const projects = [
   },
   {
     title: "Odin Project Web Development Projects",
-    image: "Web Development Projects",
+    image: "assets/theodinproject.png",
     goal: "Complete the Odin Project curriculum for web development",
     status: "Ongoing",
     skills: ["HTML", "CSS", "JavaScript", "React", "chrome dev tools"],
     icon: "🖥️",
   },
   {
-    title: "Personal Portfolio Website (This one!)",
-    image: "You're right here!",
+    title: "Personal Portfolio Website (You're right here!)",
+    image: "assets/personalwebsite.png",
     goal: "Create a personal portfolio website to showcase my projects and skills",
     status: "Is the journey of learning ever really over?",
     skills: ["HTML", "JavaScript", "Tailwind CSS", "Vite"],
@@ -88,7 +88,7 @@ const projects = [
   },
   {
     title: "Bonus: I use Arch btw",
-    image: "Arch btw",
+    image: "assets/archlinux.png",
     goal: "Switch to using Arch Linux and rice it to my liking",
     status: "One last feature I promise and then I'm done I promise one last feature after this bug fix caused due to the one last ",
     skills: ["Arch Linux", "Shell Scripting", "Top Tier debugging skills", "Anger Mangement perhaps?"],
@@ -96,34 +96,50 @@ const projects = [
   },
 ];
 
+const journal = [
+  {
+    title: "Custom Keyboard",
+    gallery: [
+      {type: "image", src: "assets/keyboard.png", alt: "Keyboard"},
+      {type: "image", src: "assets/keyboard.png", alt: "Keyboard"},
+      {type: "image", src: "assets/keyboard.png", alt: "Keyboard"},
+    ],
+    purpose: "meow meow",
+    details: "meow meow",
+    skills: "meow meow",
+    challenges: "meow meow",
+  },
+];
 
 export const Home = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProjectIdx, setSelectedProjectIdx] = useState(null);
   return (
     <section
       id="home"
-      className="min-h-screen    items-center justify-start relative bg-[url(/home/aahan/my-workbench-website/src/assets/Blueprint.svg)] bg-cover bg-center bg-no-repeat py-16 px-4"
+      className="min-h-screen text-lg items-center justify-start relative bg-[url(/home/aahan/my-workbench-website/src/assets/Blueprint.svg)] bg-cover bg-center bg-no-repeat py-16 px-4"
     >
-      <RevealOnScroll>
-      <section className="flex flex-wrap justify-center gap-6 sm:gap-8 z-10 max-w-[1600px]">
+      
+      <section className="flex flex-wrap justify-center items-start gap-6 sm:gap-8 z-10 max-w-[1600px]">
       <div className="text-center z-10 mb-12 max-w-[90%] sm:max-w-full">
           <h1
-            className="text-4xl sm:text-5xl md:text-7xl font-bold leading-snug"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold leading-snug "
             style={{ color: "#e5e1d0", fontFamily: "'Patrick Hand', cursive" }}
           >
             Hi, I'm Aahan.<br />I build things.
           </h1>
         </div>
-        {projects.map((proj, idx) => (
-          <RevealOnScroll key={idx}>
-            <StickyNote {...proj} onClick={() => setSelectedProject(proj)} />
-          </RevealOnScroll>
-        ))}
+        
+          {projects.map((proj, idx) => (
+            <StickyNote key={idx} {...proj} onClick={() => setSelectedProjectIdx(idx)} />
+          ))}
+        
       </section>
-      {selectedProject && (
-        <ProjectJournal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      {selectedProjectIdx !== null && journal[selectedProjectIdx] && (
+        <ProjectJournal 
+        project={journal[selectedProjectIdx]} 
+        onClose={() => setSelectedProjectIdx(null)} />
       )}
-      </RevealOnScroll>
+      
     </section>
   );
 };
