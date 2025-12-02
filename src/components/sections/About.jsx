@@ -78,7 +78,7 @@ export const About = () => {
               />
               <h3 className="text-2xl sm:text-3xl mb-4 text-center break-words">Who I Am</h3>
               <p className="text-base sm:text-lg break-words">
-                I'm <strong>Aahan Mehta</strong>, a junior at Purdue University majoring in Computer Science (Honors) with a minor in Electrical and Computer Engineering. I'm passionate about firmware, embedded systems, and system integration, and I thrive at the intersection of software and hardware. My curiosity drives me to understand how things work from the inside out, and I learn best by building—from compilers and CPUs to embedded projects and real-time firmware.
+                I'm <strong>Aahan Mehta</strong>, a junior at Purdue University majoring in Computer Science (Honors) with a minor in Electrical and Computer Engineering. I'm passionate about firmware, embedded systems, and systems engineering, and I thrive at the intersection of software and hardware. My curiosity drives me to understand how things work from the inside out, and I learn best by building—from compilers and CPUs to embedded projects and real-time firmware.
               </p>
             </div>
           </RevealOnScroll>
