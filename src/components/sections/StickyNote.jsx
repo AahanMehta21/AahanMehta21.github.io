@@ -1,21 +1,10 @@
 import React from "react";
 
-const journal = [
-  {
-    title: "Custom Keyboard",
-    images: ["keyboard.png", "keyboard.png", "keyboard.png"],
-    purpose: "meow meow",
-    details: "meow meow",
-    skills: "meow meow",
-    challenges: "meow meow",
-  },
-];
-
 export const StickyNote = ({ title, image, goal, status, skills, icon, onClick }) => {
   return (
     <div
     onClick={onClick}
-  className="relative w-[280px] sm:w-[300px] p-4 shadow-lg rounded-lg border text-black transform rotate-[-1.5deg] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:brightness-110 cursor-pointer"
+  className="relative w-[280px] sm:w-[300px] max-w-[calc(100vw-2rem)] p-3 sm:p-4 shadow-lg rounded-lg border text-black transform rotate-[-1.5deg] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:brightness-110 cursor-pointer"
   style={{
     backgroundColor: "#fdf6e3",
     backgroundImage: `
@@ -31,6 +20,8 @@ export const StickyNote = ({ title, image, goal, status, skills, icon, onClick }
     borderColor: "#d3d3d3",
     fontFamily: "'Patrick Hand', cursive",
     lineHeight: "25px",
+    wordWrap: "break-word",
+    overflowWrap: "break-word",
   }}
 >
 
@@ -46,19 +37,19 @@ export const StickyNote = ({ title, image, goal, status, skills, icon, onClick }
       }}
     />
 
-      <h2 className="text-2xl mb-2 text-center">{title}</h2>
+      <h2 className="text-xl sm:text-2xl mb-2 text-center break-words">{title}</h2>
       {image && (
         <img
           src={image}
           alt={title}
-          className="w-full mb-4 border border-black"
+          className="w-full mb-3 sm:mb-4 border border-black"
         />
       )}
-      <p><strong>Goal:</strong> {goal}</p>
-      <p><strong>Status:</strong> {status}</p>
-      <div className="flex justify-between items-start">
-        <p><strong>Skills:</strong> {skills.join(", ")}</p>
-        <div className="text-right mt-2 text-xl">{icon}</div>
+      <p className="text-sm sm:text-base break-words"><strong>Goal:</strong> {goal}</p>
+      <p className="text-sm sm:text-base break-words mt-2"><strong>Status:</strong> {status}</p>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mt-2">
+        <p className="text-sm sm:text-base break-words flex-1"><strong>Skills:</strong> <span className="break-words">{skills.join(", ")}</span></p>
+        <div className="text-right mt-1 sm:mt-2 text-lg sm:text-xl flex-shrink-0">{icon}</div>
       </div>
       
     </div>

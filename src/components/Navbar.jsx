@@ -7,7 +7,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <nav
-      className="fixed left-0 top-0 h-full z-40 bg-[url(/home/aahan/my-workbench-website/src/assets/navbarimg.jpg)] bg-cover bg-center backdrop-blur-lg border-r border-white/10 shadow-lg"
+      className="fixed left-0 top-0 h-full z-40 bg-[url(/home/aahan/my-workbench-website/src/assets/navbarimg.jpg)] bg-cover bg-center backdrop-blur-lg border-r border-white/10 shadow-lg hidden md:block"
       style={{
         boxShadow: "10px 0 10px rgba(0, 0, 0, 0.5)", // Adds shadow to the right
       }}
@@ -17,14 +17,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           Home
         </a>
 
-        <div
-          className="w-7 h-5 relative cursor-pointer z-40 md:hidden px-4"
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          &#9776;
-        </div>
-
-        <div className={`flex flex-col items-start space-y-4 px-4 ${menuOpen ? "block" : "hidden"} md:flex`}>
+        <div className={`flex flex-col items-start space-y-4 px-4`}>
           <a
             href="#home"
             className="text-gray-300 hover:text-white transition-colors"
@@ -36,12 +29,6 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             className="text-gray-300 hover:text-white transition-colors"
           >
             About
-          </a>
-          <a
-            href="#projects"
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            Projects
           </a>
           <a
             href="#contact"
