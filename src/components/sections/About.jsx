@@ -7,6 +7,9 @@ export const About = () => {
     "microcontroller architecture, ADC/DAC interfacing, SPI/I2C/UART communication",
     "UVM, SystemVerilog DV & waveform debugging",
     "Computer architecture, compilers, & digital logic design",
+    "Machine Learning, OpenCV, TensorFlow, PyTorch, ONNX",
+    "Programming languages: C, C++, SystemVerilog, Python, Java, JavaScript, Perl, x86 Assembly, UNIX Shell Scripting",
+    "Tools: Git, Perforce, JIRA, Verdi, Vivado, KiCad, MATLAB",
     "Teamwork, leadership, and problem-solving through hands-on projects",
   ];
 
@@ -58,7 +61,7 @@ export const About = () => {
                 I'm <strong>Aahan Mehta</strong>, a junior at Purdue University majoring in Computer Science (Honors) with a minor in Electrical and Computer Engineering. My strengths lie in firmware engineering, Machine Learning, and systems engineering, and I thrive at the intersection of software and hardware. My curiosity drives me to understand how things work from the inside out, and I learn best by building—from compilers and CPUs to computer vision and edge ML to embedded projects and firmware.
                 <br></br>
                    I'm passionate about understanding how complex systems work, seeing software translate into real hardware behavior, and creating systems that make an immediate impact. Whether it's firmware, embedded systems, or system integration, I'm motivated by projects where I can take ownership, learn continuously, and see my work come to life.
-                   <br></br>My goal is to understand the entire stack from high-level application based software down to silicon and RTL, because I believe this breadth knowldege is crucial to building robust and efficient systems.
+                   <br></br>My goal is to understand the entire stack from high-level application based software down to silicon and RTL, because I believe this breadth of knowledge is crucial to building robust and efficient systems.
               </p>
             </div>
           </RevealOnScroll>
@@ -152,6 +155,12 @@ waveform analysis for signal-level debugging.
     <li className="flex items-start break-words">
       <span className="mr-2 flex-shrink-0">•</span>
       <span className="break-words">
+        <strong>Undergraduate Research Assistant – Edge Device AI/ML</strong> (Sep 2025 - Present, Dependable Computing Systems Lab @Purdue University): Investigating adaptive offloading techniques for deploying large AI/ML models on AR/VR devices (currently Oculus Quest 3) under constrained compute and bandwidth resources. Developed an ONNX-based inference pipeline using Sentis with Oculus SDK integration for real-time analytics.
+      </span>
+    </li>
+    <li className="flex items-start break-words">
+      <span className="mr-2 flex-shrink-0">•</span>
+      <span className="break-words">
         <strong>Undergraduate Researcher – Secure Autonomous Systems</strong> (May 2025 - Jul 2025, Purdue University): Researched adversarial patch attacks on multi-object tracking pipelines in autonomous vehicles and implemented patch-based attacks on YOLOv5 + Kalman filter to induce bounding box misalignment under Prof. Berkay Celik.
       </span>
     </li>
@@ -159,12 +168,6 @@ waveform analysis for signal-level debugging.
       <span className="mr-2 flex-shrink-0">•</span>
       <span className="break-words">
         <strong>Eye Tracking for Dyslexia Detection</strong> (Independent High School Research, India): Researched computer vision and ML approaches for dyslexia detection, achieving 92.8% accuracy. Developed models using OpenCV, R, and Python for multi-lingual detection of school-going students.
-      </span>
-    </li>
-    <li className="flex items-start break-words">
-      <span className="mr-2 flex-shrink-0">•</span>
-      <span className="break-words">
-        <strong>Undergraduate Research Assistant – Edge Device AI/ML</strong> (Sep 2025 - Present, Purdue University): Investigating adaptive offloading techniques for deploying large AI/ML models on AR/VR devices (currently Oculus Quest 3) under constrained compute and bandwidth resources. Developed an ONNX-based inference pipeline using Sentis with Oculus SDK integration for real-time analytics.
       </span>
     </li>
   </ul>
