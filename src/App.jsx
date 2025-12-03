@@ -8,6 +8,7 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
+import Blueprint from "/assets/Blueprint.svg";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,11 +22,17 @@ function App() {
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-black text-gray-100`}
       >
+         <div
+      className="min-h-screen bg-center bg-no-repeat bg-cover"
+      style={{ backgroundImage: `url('/assets/Blueprint.svg')`, backgroundAttachment: 'fixed' }}
+    >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
         <About />
+        <Contact />
         {/* <Contact /> */}
+      </div>
       </div>
     </>
   );

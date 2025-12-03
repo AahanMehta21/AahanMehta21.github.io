@@ -17,7 +17,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen text-lg items-center justify-start relative bg-[url('assets/Blueprint.svg')] bg-cover bg-center bg-no-repeat py-16 px-4 md:pl-0"
+      className="min-h-screen text-lg items-center justify-start relative bg-cover bg-center bg-no-repeat py-16 px-4 md:pl-0"
     >
       <div className="max-w-6xl mx-auto">
         {/* About heading removed — 'Who I Am' card will serve as the About element inside the container */}

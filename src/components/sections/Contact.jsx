@@ -1,91 +1,125 @@
-import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import emailjs from "emailjs-com";
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
-        import.meta.env.VITE_PUBLIC_KEY
-      )
-      .then((result) => {
-        alert("Message Sent!");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
-  };
-
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen text-lg flex items-center justify-center relative py-24 px-4"
     >
       <RevealOnScroll>
-        <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            Get In Touch
-          </h2>
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="relative">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                value={formData.name}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Name..."
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-              />
-            </div>
+        <div
+          className="relative w-full max-w-2xl p-6 sm:p-8 shadow-lg rounded-lg border text-black transform rotate-[0.8deg]"
+          style={{
+            backgroundColor: "#fdf6e3",
+            backgroundImage: `
+              repeating-linear-gradient(
+                to bottom,
+                transparent 24px,
+                rgba(100, 100, 100, 0.2) 25px
+              ),
+              url('/assets/paper-fibers.png')
+            `,
+            backgroundSize: "100% 25px, cover",
+            backgroundBlendMode: "normal, multiply",
+            borderColor: "#d3d3d3",
+            fontFamily: "'Patrick Hand', cursive",
+            lineHeight: "28px",
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
+          }}
+        >
+          {/* Sticky Tape */}
+          <div
+            className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-6 z-20"
+            style={{
+              backgroundColor: "rgba(255, 255, 200, 0.7)",
+              transform: "rotate(-2deg)",
+              clipPath: "polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
+              border: "1px solid rgba(200, 200, 150, 0.4)",
+            }}
+          />
 
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="example@gmail.com"
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-            </div>
+          {/* Heading */}
+          <h3 className="text-3xl sm:text-4xl text-center mb-4">Contact Me</h3>
 
-            <div className="relative">
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={5}
-                value={formData.message}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Your Message..."
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-              />
-            </div>
+          {/* Intro */}
+          <p className="text-lg sm:text-xl mb-6 text-center">
+            If you'd like to reach out—whether it’s about firmware, machine learning, 
+            research, collaborations, or just to say hi—I'd love to connect!
+          </p>
+
+          {/* Contact Links */}
+          <div className="space-y-3 text-lg sm:text-xl mb-8 text-center">
+            <p>
+              📧 Email:{" "}
+              <a
+                href="mailto:aahanmehta2005@purdue.edu"
+                className="underline hover:text-blue-700"
+              >
+                aahanmehta2005@purdue.edu
+              </a>
+            </p>
+
+            <p>
+              💼 LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/aahanm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-blue-700"
+              >
+                linkedin.com/in/aahanm
+              </a>
+            </p>
+
+            <p>
+              💻 GitHub:{" "}
+              <a
+                href="https://github.com/AahanMehta21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-blue-700"
+              >
+                github.com/AahanMehta21
+              </a>
+            </p>
+          </div>
+
+          {/* Optional Contact Form */}
+          <form
+            className="flex flex-col gap-4 text-base sm:text-lg"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Thanks for reaching out! (Form not wired up yet)");
+            }}
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              className="p-3 rounded border bg-white"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              className="p-3 rounded border bg-white"
+              required
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your message…"
+              className="p-3 rounded border bg-white"
+              required
+            />
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+              className="mt-2 py-2 px-4 rounded bg-black text-white hover:bg-gray-800 transition"
+              style={{ fontFamily: "'Patrick Hand', cursive" }}
             >
               Send Message
             </button>
