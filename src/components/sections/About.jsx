@@ -115,54 +115,61 @@ waveform analysis for signal-level debugging.
       </ul>
     </div>
 
-    {/* Research Experience */}
-    <div
-      className="relative w-full sm:w-[500px] max-w-[calc(100vw-2rem)] p-4 sm:p-6 shadow-lg rounded-lg border text-black transform rotate-[1deg]"
-      style={{
-        backgroundColor: "#fdf6e3",
-        backgroundImage: `
-          repeating-linear-gradient(
-            to bottom,
-            transparent 24px,
-            rgba(100, 100, 100, 0.2) 25px
-          ),
-          url('/assets/paper-fibers.png')
-        `,
-        backgroundSize: "100% 25px, cover",
-        backgroundBlendMode: "normal, multiply",
-        borderColor: "#d3d3d3",
-        fontFamily: "'Patrick Hand', cursive",
-        lineHeight: "25px",
-        wordWrap: "break-word",
-        overflowWrap: "break-word",
-      }}
-    >
-      <div
-        className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-6 z-20 shadow-md"
-        style={{
-          backgroundColor: "rgba(255, 255, 200, 0.65)",
-          transform: "rotate(-2deg)",
-          clipPath: "polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)",
-          boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
-          border: "1px solid rgba(200, 200, 150, 0.4)",
-        }}
-      />
-      <h3 className="text-2xl sm:text-3xl mb-4 text-center break-words">Research Experience</h3>
-      <ul className="space-y-3 text-base sm:text-lg list-none">
-        <li className="flex items-start break-words">
-          <span className="mr-2 flex-shrink-0">•</span>
-          <span className="break-words">
-            <strong>Undergraduate Researcher – Secure Autonomous Systems</strong> (May 2025 - Jul 2025, Purdue University): Researched adversarial patch attacks on multi-object tracking pipelines in autonomous vehicles and implemented attacks on YOLOv5 + Kalman filter to induce bounding box misalignment.
-          </span>
-        </li>
-        <li className="flex items-start break-words">
-          <span className="mr-2 flex-shrink-0">•</span>
-          <span className="break-words">
-            <strong>Eye Tracking for Dyslexia Detection</strong> (Independent High School Research, India): Researched computer vision & ML approaches for dyslexia detection, achieving 92.8% accuracy. Developed models using OpenCV, R, and Python for multi-lingual detection of school-going students.
-          </span>
-        </li>
-      </ul>
-    </div>
+   {/* Research Experience */}
+<div
+  className="relative w-full sm:w-[500px] max-w-[calc(100vw-2rem)] p-4 sm:p-6 shadow-lg rounded-lg border text-black transform rotate-[1deg]"
+  style={{
+    backgroundColor: "#fdf6e3",
+    backgroundImage: `
+      repeating-linear-gradient(
+        to bottom,
+        transparent 24px,
+        rgba(100, 100, 100, 0.2) 25px
+      ),
+      url('/assets/paper-fibers.png')
+    `,
+    backgroundSize: "100% 25px, cover",
+    backgroundBlendMode: "normal, multiply",
+    borderColor: "#d3d3d3",
+    fontFamily: "'Patrick Hand', cursive",
+    lineHeight: "25px",
+    wordWrap: "break-word",
+    overflowWrap: "break-word",
+  }}
+>
+  <div
+    className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-6 z-20 shadow-md"
+    style={{
+      backgroundColor: "rgba(255, 255, 200, 0.65)",
+      transform: "rotate(-2deg)",
+      clipPath: "polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)",
+      boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
+      border: "1px solid rgba(200, 200, 150, 0.4)",
+    }}
+  />
+  <h3 className="text-2xl sm:text-3xl mb-4 text-center break-words">Research Experience</h3>
+  <ul className="space-y-3 text-base sm:text-lg list-none">
+    <li className="flex items-start break-words">
+      <span className="mr-2 flex-shrink-0">•</span>
+      <span className="break-words">
+        <strong>Undergraduate Researcher – Secure Autonomous Systems</strong> (May 2025 - Jul 2025, Purdue University): Researched adversarial patch attacks on multi-object tracking pipelines in autonomous vehicles and implemented patch-based attacks on YOLOv5 + Kalman filter to induce bounding box misalignment under Prof. Berkay Celik.
+      </span>
+    </li>
+    <li className="flex items-start break-words">
+      <span className="mr-2 flex-shrink-0">•</span>
+      <span className="break-words">
+        <strong>Eye Tracking for Dyslexia Detection</strong> (Independent High School Research, India): Researched computer vision and ML approaches for dyslexia detection, achieving 92.8% accuracy. Developed models using OpenCV, R, and Python for multi-lingual detection of school-going students.
+      </span>
+    </li>
+    <li className="flex items-start break-words">
+      <span className="mr-2 flex-shrink-0">•</span>
+      <span className="break-words">
+        <strong>Undergraduate Research Assistant – Edge Device AI/ML</strong> (Sep 2025 - Present, Purdue University): Investigating adaptive offloading techniques for deploying large AI/ML models on AR/VR devices (currently Oculus Quest 3) under constrained compute and bandwidth resources. Developed an ONNX-based inference pipeline using Sentis with Oculus SDK integration for real-time analytics.
+      </span>
+    </li>
+  </ul>
+</div>
+
 
     {/* Other Experience */}
     <div
