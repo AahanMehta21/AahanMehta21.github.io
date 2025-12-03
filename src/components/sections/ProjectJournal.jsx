@@ -41,13 +41,11 @@ export const ProjectJournal = ({ project, onClose }) => {
   };
 
   useEffect(() => {
+  // Prevent body scroll but allow modal to scroll
   document.body.style.overflow = "hidden";
-  const preventTouch = (e) => e.preventDefault();
-  document.body.addEventListener("touchmove", preventTouch, { passive: false });
-
+  
   return () => {
     document.body.style.overflow = "";
-    document.body.removeEventListener("touchmove", preventTouch);
   };
 }, []);
 
@@ -55,7 +53,7 @@ export const ProjectJournal = ({ project, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-[#fdf6e3] bg-opacity-95 overflow-y-auto transition-all duration-500 ease-in-out ${
+      className={`fixed inset-0 z-50 bg-[#fdf6e3] bg-opacity-95 overflow-y-auto transition-all duration-500 ease-in-out touch-pan-y ${
         closing ? "animate-bookClose" : "animate-bookOpen"
       }`}
       style={{
@@ -71,6 +69,7 @@ export const ProjectJournal = ({ project, onClose }) => {
         `,
         backgroundSize: "100% 25px, cover",
         backgroundBlendMode: "normal, multiply",
+        WebkitOverflowScrolling: "touch",
       }}
     >
       {/* Stitched Leather Spine - Hidden on mobile */}
