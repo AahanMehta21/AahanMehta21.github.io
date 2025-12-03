@@ -7,7 +7,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <nav
-      className="fixed left-0 top-0 h-full z-40 bg-[url(/home/aahan/my-workbench-website/src/assets/navbarimg.jpg)] bg-cover bg-center backdrop-blur-lg border-r border-white/10 shadow-lg hidden md:block"
+      className="fixed left-0 top-0 h-full z-40 bg-[url('assets/navbarimg.jpg')] bg-cover bg-center backdrop-blur-lg border-r border-white/10 shadow-lg hidden md:block"
       style={{
         boxShadow: "10px 0 10px rgba(0, 0, 0, 0.5)", // Adds shadow to the right
       }}

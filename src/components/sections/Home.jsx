@@ -183,7 +183,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen text-lg items-center justify-start relative bg-[url(/home/aahan/my-workbench-website/src/assets/Blueprint.svg)] bg-cover bg-center bg-no-repeat py-16 px-4 md:pl-0"
+      className="min-h-screen text-lg items-center justify-start relative bg-[url('/assets/Blueprint.svg')] bg-cover bg-center bg-no-repeat py-16 px-4 md:pl-0"
     >
       
       <section className="flex flex-wrap justify-center items-start gap-4 sm:gap-6 md:gap-8 z-10 max-w-[1600px] mx-auto">
